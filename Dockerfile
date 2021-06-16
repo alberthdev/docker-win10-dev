@@ -1,8 +1,8 @@
-# Indicates that the windowsservercore image will be used as the base image.
+# Indicates that the Windows 10 (20H2) image will be used as the base image.
 FROM mcr.microsoft.com/windows:20H2
 
 # Metadata indicating an image maintainer.
-LABEL maintainer="alberthdev@noreply.users.github.com"
+LABEL maintainer="alberthdev@users.noreply.github.com"
 
 # Install all dev tools
 RUN powershell -Command Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
